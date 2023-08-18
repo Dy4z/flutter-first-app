@@ -1,0 +1,13 @@
+com.example.foodapp-jetified-window-1.0.0-beta04-0 C:\Users\user\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\res
+com.example.foodapp-jetified-annotation-experimental-1.1.0-1 C:\Users\user\.gradle\caches\transforms-3\6c0c163cc77ae6c91f9f7dfcd179c29c\transformed\jetified-annotation-experimental-1.1.0\res
+com.example.foodapp-core-1.6.0-2 C:\Users\user\.gradle\caches\transforms-3\7e9df2ac2213a6bd3cef0f2f27870d79\transformed\core-1.6.0\res
+com.example.foodapp-jetified-window-java-1.0.0-beta04-3 C:\Users\user\.gradle\caches\transforms-3\ae81e06d24c799147c26814497a2a305\transformed\jetified-window-java-1.0.0-beta04\res
+com.example.foodapp-debug-4 D:\Df Stuff\Prakerja\Alterra Flutter\Unjuk Keterampilan\foodapp\android\app\src\debug\res
+com.example.foodapp-main-5 D:\Df Stuff\Prakerja\Alterra Flutter\Unjuk Keterampilan\foodapp\android\app\src\main\res
+com.example.foodapp-pngs-6 D:\Df Stuff\Prakerja\Alterra Flutter\Unjuk Keterampilan\foodapp\build\app\generated\res\pngs\debug
+com.example.foodapp-resValues-7 D:\Df Stuff\Prakerja\Alterra Flutter\Unjuk Keterampilan\foodapp\build\app\generated\res\resValues\debug
+com.example.foodapp-rs-8 D:\Df Stuff\Prakerja\Alterra Flutter\Unjuk Keterampilan\foodapp\build\app\generated\res\rs\debug
+com.example.foodapp-mergeDebugResources-9 D:\Df Stuff\Prakerja\Alterra Flutter\Unjuk Keterampilan\foodapp\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.example.foodapp-mergeDebugResources-10 D:\Df Stuff\Prakerja\Alterra Flutter\Unjuk Keterampilan\foodapp\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.example.foodapp-merged_res-11 D:\Df Stuff\Prakerja\Alterra Flutter\Unjuk Keterampilan\foodapp\build\app\intermediates\merged_res\debug
+com.example.foodapp-packaged_res-12 D:\Df Stuff\Prakerja\Alterra Flutter\Unjuk Keterampilan\foodapp\build\flutter_native_splash\intermediates\packaged_res\debug

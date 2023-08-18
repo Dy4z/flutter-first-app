@@ -27,7 +27,7 @@ class MyProfile extends StatelessWidget {
       Column(
         children : [
           Container(
-            padding: const EdgeInsets.all(40),
+            padding: const EdgeInsets.fromLTRB(0, 60, 60, 5),
             child: const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -38,27 +38,52 @@ class MyProfile extends StatelessWidget {
                   fontWeight: FontWeight.bold),),
           
                    SizedBox(
-                            height: 6,
+                            height: 3,
                           ),
             
                 ]),
           ),
 
-        ClipRRect(
-          borderRadius: BorderRadius.circular(40),
-          child: Container (
-              margin: const EdgeInsets.all(5),
-              height: 100,
-              width: 200,
-              color: Colors.white,
-            ),
-        ),
+       Container(  
+        width: 370,  
+        height: 170,  
+        padding: const EdgeInsets.fromLTRB(65, 5, 5, 5),  
+        child: Card(  
+          shape: RoundedRectangleBorder(  
+            borderRadius: BorderRadius.circular(15.0),  
+          ),  
+          color: Colors.white,  
+          elevation: 1,  
+          child: const Column(  
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            // mainAxisSize: MainAxisSize.min,  
+            children: <Widget>[  
+              ListTile(
+                leading: Icon(Icons.face, size: 60),  
+
+                title: Text(  
+                  'M. Df',  
+                  style: TextStyle(fontSize: 18.0)  
+                ), 
+              
+
+                subtitle: Text(  
+                  'Md@gmail.com\nNo.15 uti stret off ovi palaca jak state',  
+                  style: TextStyle(
+                    fontSize: 15.0,
+                    color: Colors.grey
+                  )  
+                ),  
+              ),  
 
 
         ]
 
 
       )
+    )
+    )
+    ])
     );
   }
 }

@@ -260,38 +260,38 @@ class _MyHomePageState extends State<MyHomePage> {
           thickness: 1.3,
           indent: 60,
           endIndent: 100,
-          color: Color(0xffFF460A),
-        ),
-
-        const ListTile(
-          leading : Icon(Icons.file_open_rounded),
-          title: Text('Setting'),
-          iconColor: Colors.white,
-          textColor: Colors.white,
-          minLeadingWidth: 10,
-        ),
-        const Divider(
-          height: 1,
-          thickness: 1.3,
-          indent: 60,
-          endIndent: 100,
           color: Color.fromARGB(43, 255, 255, 255),
         ),
 
-        const ListTile(
-          leading : Icon(Icons.history),
-          title: Text('History'),
-          iconColor: Colors.white,
-          textColor: Colors.white,
-          minLeadingWidth: 10,
-        ),
-        const Divider(
-          height: 1,
-          thickness: 1.3,
-          indent: 60,
-          endIndent: 100,
-          color: Color.fromARGB(43, 255, 255, 255),
-        ),
+        // const ListTile(
+        //   leading : Icon(Icons.file_open_rounded),
+        //   title: Text('Setting'),
+        //   iconColor: Colors.white,
+        //   textColor: Colors.white,
+        //   minLeadingWidth: 10,
+        // ),
+        // const Divider(
+        //   height: 1,
+        //   thickness: 1.3,
+        //   indent: 60,
+        //   endIndent: 100,
+        //   color: Color.fromARGB(43, 255, 255, 255),
+        // ),
+
+        // const ListTile(
+        //   leading : Icon(Icons.history),
+        //   title: Text('History'),
+        //   iconColor: Colors.white,
+        //   textColor: Colors.white,
+        //   minLeadingWidth: 10,
+        // ),
+        // const Divider(
+        //   height: 1,
+        //   thickness: 1.3,
+        //   indent: 60,
+        //   endIndent: 100,
+        //   color: Color.fromARGB(43, 255, 255, 255),
+        // ),
       ],
     ),
 

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:foodapp/makanan.dart';
+import 'package:foodapp/minuman.dart';
 
 Future main() async {
 
@@ -25,10 +27,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(fontFamily: 'Nunito'
+      theme: ThemeData(
+        fontFamily: 'Nunito',
+  
       ),
-      home: const MyHomePage(),
+      debugShowCheckedModeBanner: false,
+      initialRoute: 'home',
+      routes: {
+        'home': (_) => const MyHomePage(),
+        'makanan': (_) => const Makanan(),
+        'minuman': (_) => const Minuman(),
+      },
     );
   }
 }
@@ -49,13 +58,8 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 236, 232, 232),
         elevation: 0,
-        leading: IconButton(
-          icon: const Icon(
-            Icons.menu),
-            color: Colors.black87,
-          onPressed: () {},
-        ),
-       
+        iconTheme: const IconThemeData(color: Colors.black),
+        
         actions: [
           IconButton(
           onPressed: () {},
@@ -64,201 +68,279 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
 
-  body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Container(
-                width: double.infinity,
-                // decoration: const BoxDecoration(
-                //     color: Color.fromARGB(255, 236, 232, 232),
-                //     borderRadius:
-                //         BorderRadius.vertical(bottom: Radius.circular(30))),
-                padding: const EdgeInsets.fromLTRB(30, 20, 20, 0),
-                child: const Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      'Delicious\nfood for you',
-                      style: TextStyle(color: Colors.black87,
-                      fontSize: 40,
-                      fontWeight: FontWeight.bold),
-                    ),
-                    // search
-                    // SizedBox(
-                    //   height: 5,
-                    // ),
-                   
-                    // SizedBox(
-                    //   height: 20,
-                    // ),
-                    // Container(
-                    //   padding: const EdgeInsets.all(5),
-                    //   decoration: BoxDecoration(
-                    //       color: const Color.fromRGBO(244, 243, 243, 1),
-                    //       borderRadius: BorderRadius.circular(15)),
-                    //   child: const TextField(
-                    //     decoration: InputDecoration(
-                    //         border: InputBorder.none,
-                    //         prefixIcon: Icon(
-                    //           Icons.search,
-                    //           color: Colors.black87,
-                    //         ),
-                    //         hintText: "Search you're looking for",
-                    //         hintStyle:
-                    //             TextStyle(color: Colors.grey, fontSize: 15)),
-                    //   ),
-                    // ),
-                    // SizedBox(
-                    //   height: 10,
-                    // ),
-                  ],
+  body: Center(
+    child: SafeArea(
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Container(
+                  width: double.infinity,
+                  // decoration: const BoxDecoration(
+                  //     color: Color.fromARGB(255, 236, 232, 232),
+                  //     borderRadius:
+                  //         BorderRadius.vertical(bottom: Radius.circular(30))),
+                  padding: const EdgeInsets.fromLTRB(30, 20, 20, 0),
+                  child: const Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        'Delicious\nfood for you',
+                        style: TextStyle(color: Colors.black87,
+                        fontSize: 40,
+                        fontWeight: FontWeight.bold),
+                      ),
+                      // search
+                      // SizedBox(
+                      //   height: 5,
+                      // ),
+                     
+                      // SizedBox(
+                      //   height: 20,
+                      // ),
+                      // Container(
+                      //   padding: const EdgeInsets.all(5),
+                      //   decoration: BoxDecoration(
+                      //       color: const Color.fromRGBO(244, 243, 243, 1),
+                      //       borderRadius: BorderRadius.circular(15)),
+                      //   child: const TextField(
+                      //     decoration: InputDecoration(
+                      //         border: InputBorder.none,
+                      //         prefixIcon: Icon(
+                      //           Icons.search,
+                      //           color: Colors.black87,
+                      //         ),
+                      //         hintText: "Search you're looking for",
+                      //         hintStyle:
+                      //             TextStyle(color: Colors.grey, fontSize: 15)),
+                      //   ),
+                      // ),
+                      // SizedBox(
+                      //   height: 10,
+                      // ),
+                    ],
+                  ),
                 ),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(50, 0, 0, 20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Container(
-                      padding: const EdgeInsets.only(
-                        bottom: 5
-                      ),
-                      decoration: const BoxDecoration(
-                        border: Border(bottom: BorderSide(
-                          color: Color.fromRGBO(228, 74, 27, 1),
-                          width: 3.0,
-                        ))
-                      ),
-                      child: const Text(
-                        'Foods',
-                        style:
-                            TextStyle(fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: Color.fromRGBO(228, 74, 27, 1)),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    SizedBox(
-                      height: 220,
-                      child: ListView(
-                        scrollDirection: Axis.horizontal,
-                        children: <Widget>[
-                          promoCard('assets/makanan.png'),
-                          promoCard('assets/makanan.png'),
-                        ],
-                        
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                
+                const SizedBox(
+                  height: 20,
+                ),
                 Padding(
-                padding: const EdgeInsets.only(bottom: 20.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Container(
-                      padding: const EdgeInsets.only(
-                        bottom: 5
+                  padding: const EdgeInsets.fromLTRB(50, 0, 0, 20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Container(
+                        padding: const EdgeInsets.only(
+                          bottom: 5
+                        ),
+                        decoration: const BoxDecoration(
+                          border: Border(bottom: BorderSide(
+                            color: Color.fromRGBO(228, 74, 27, 1),
+                            width: 3.0,
+                          ))
+                        ),
+                        child: const Text(
+                          'Foods',
+                          style:
+                              TextStyle(fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromRGBO(228, 74, 27, 1)),
+                        ),
                       ),
-                      decoration: const BoxDecoration(
-                        border: Border(bottom: BorderSide(
-                          color: Color.fromRGBO(228, 74, 27, 1),
-                          width: 3.0,
-                        ))
+                      const SizedBox(
+                        height: 15,
                       ),
-                      child: const Text(
-                        'Drinks',
-                        style:
-                            TextStyle(fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: Color.fromRGBO(228, 74, 27, 1)),
+                    GestureDetector(
+                        child: SizedBox(
+                          height: 220,
+                          child: ListView(
+                            scrollDirection: Axis.horizontal,
+                            children: <Widget>[
+                              promoCard('assets/makanan.png'),
+                              promoCard('assets/makanan.png'),
+                            ],
+                            
+                          ),
+                        ),
+                        onTap: () {
+                          Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => const Makanan()));
+                        },
                       ),
-                    ),
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    SizedBox(
-                      height: 220,
-                      child: ListView(
-                        scrollDirection: Axis.horizontal,
-                        children: <Widget>[
-                          promoCard2('assets/minuman2.png'),
-                          promoCard2('assets/minuman3.png'),
-                        ],
+                      const SizedBox(
+                        height: 20,
                       ),
-                      
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                  ],
+                  
+                  Padding(
+                  padding: const EdgeInsets.only(bottom: 20.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Container(
+                        padding: const EdgeInsets.only(
+                          bottom: 5
+                        ),
+                        decoration: const BoxDecoration(
+                          border: Border(bottom: BorderSide(
+                            color: Color.fromRGBO(228, 74, 27, 1),
+                            width: 3.0,
+                          ))
+                        ),
+                        child: const Text(
+                          'Drinks',
+                          style:
+                              TextStyle(fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromRGBO(228, 74, 27, 1)),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      GestureDetector(
+                        child: SizedBox(
+                          height: 220,
+                          child: ListView(
+                            scrollDirection: Axis.horizontal,
+                            children: <Widget>[
+                              promoCard2('assets/minuman2.png'),
+                              promoCard2('assets/minuman3.png'),
+                              
+                            ],
+                          ),
+                          
+                        ),
+                        onTap: () {
+                          Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => const Minuman()));
+                        },
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              
-              //break
-
-            //  SizedBox(
-            //    height: 200,
-            //    child: ListView(
-            //      scrollDirection: Axis.horizontal,
-            //      children: [
-            //           Center(
-            //             child: AspectRatio(
-            //               aspectRatio:1.5 / 3,
-            //             child: Container(
-            //               decoration: BoxDecoration(
-            //                 borderRadius: BorderRadius.circular(20),
-            //             image: const DecorationImage(
-            //             fit: BoxFit.cover,
-            //                image: AssetImage('assets/makanan.png')),
-            //                   gradient: LinearGradient(
-            //                     begin: Alignment.bottomRight,
-            //                       stops: const [
-            //                         0.3,
-            //                         0.9
-            //                       ],
-            //                       colors: [
-            //                         Colors.black.withOpacity(.8),
-            //                         Colors.black.withOpacity(.2)
-            //                       ]),
-            //                 ),
-            //                 child: const Align(
-            //                   alignment: Alignment.bottomLeft,
-            //                   child: Padding(
-            //                     padding: EdgeInsets.all(15.0),
-            //                     child: Text(
-            //                       'Veggie tomato mix',
-            //                       style:
-            //                           TextStyle(color: Colors.white, fontSize: 20),
-            //                     ),
-            //                   ),
-            //                 ),
-                                 
-            //             ),
-                        
-                        
-            //             ),
-            //    )],
-            //    ),
-            //  ),
-
-             
-
-                ],
+                
+                //break
+  
+              //  SizedBox(
+              //    height: 200,
+              //    child: ListView(
+              //      scrollDirection: Axis.horizontal,
+              //      children: [
+              //           Center(
+              //             child: AspectRatio(
+              //               aspectRatio:1.5 / 3,
+              //             child: Container(
+              //               decoration: BoxDecoration(
+              //                 borderRadius: BorderRadius.circular(20),
+              //             image: const DecorationImage(
+              //             fit: BoxFit.cover,
+              //                image: AssetImage('assets/makanan.png')),
+              //                   gradient: LinearGradient(
+              //                     begin: Alignment.bottomRight,
+              //                       stops: const [
+              //                         0.3,
+              //                         0.9
+              //                       ],
+              //                       colors: [
+              //                         Colors.black.withOpacity(.8),
+              //                         Colors.black.withOpacity(.2)
+              //                       ]),
+              //                 ),
+              //                 child: const Align(
+              //                   alignment: Alignment.bottomLeft,
+              //                   child: Padding(
+              //                     padding: EdgeInsets.all(15.0),
+              //                     child: Text(
+              //                       'Veggie tomato mix',
+              //                       style:
+              //                           TextStyle(color: Colors.white, fontSize: 20),
+              //                     ),
+              //                   ),
+              //                 ),
+                                   
+              //             ),
+                          
+                          
+              //             ),
+              //    )],
+              //    ),
+              //  ),
+  
+               
+  
+                  ],
+            ),
           ),
+        ]),
+      )
+      ),
+  ),
+  drawer: Drawer (
+    backgroundColor: const Color(0xffFF460A),
+ 
+    child: ListView(
+      children: [
+      Container (
+        padding: const EdgeInsets.all(65),
+      ),
+
+        const ListTile(
+          leading: Icon (Icons.person),
+          title: Text('Profile'),
+          iconColor: Colors.white,
+          textColor: Colors.white,
+          minLeadingWidth: 10,
+          // onLongPress: () {
+          //   print('klik');
+          // },
+          // onTap: () {
+          //   print('menu profile');
+          //   },
         ),
-      ]),
-    )
-    )
+       const Divider(
+          height: 1,
+          thickness: 1.3,
+          indent: 60,
+          endIndent: 100,
+          color: Color.fromARGB(43, 255, 255, 255),
+        ),
+
+        const ListTile(
+          leading : Icon(Icons.file_open_rounded),
+          title: Text('Setting'),
+          iconColor: Colors.white,
+          textColor: Colors.white,
+          minLeadingWidth: 10,
+        ),
+        const Divider(
+          height: 1,
+          thickness: 1.3,
+          indent: 60,
+          endIndent: 100,
+          color: Color.fromARGB(43, 255, 255, 255),
+        ),
+
+        const ListTile(
+          leading : Icon(Icons.history),
+          title: Text('History'),
+          iconColor: Colors.white,
+          textColor: Colors.white,
+          minLeadingWidth: 10,
+        ),
+        const Divider(
+          height: 1,
+          thickness: 1.3,
+          indent: 60,
+          endIndent: 100,
+          color: Color.fromARGB(43, 255, 255, 255),
+        ),
+      ],
+    ),
+
+  )
     );
   }
 

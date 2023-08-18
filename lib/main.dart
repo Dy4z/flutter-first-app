@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-import 'package:foodapp/makanan.dart';
-import 'package:foodapp/minuman.dart';
+import 'package:foodapp/Makanan.dart';
+import 'package:foodapp/Minuman.dart';
+import 'package:foodapp/MyProfile.dart';
+import 'package:foodapp/routes.dart';
 
 Future main() async {
 
@@ -26,18 +28,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'foodapp',
       theme: ThemeData(
         fontFamily: 'Nunito',
+        useMaterial3: true,
   
       ),
       debugShowCheckedModeBanner: false,
       initialRoute: 'home',
-      routes: {
-        'home': (_) => const MyHomePage(),
-        'makanan': (_) => const Makanan(),
-        'minuman': (_) => const Minuman(),
-      },
+      routes: routesList,
     );
   }
 }
@@ -58,13 +57,15 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 236, 232, 232),
         elevation: 0,
+        scrolledUnderElevation: 0,
         iconTheme: const IconThemeData(color: Colors.black),
         
         actions: [
           IconButton(
           onPressed: () {},
-          icon: const Icon(Icons.trolley),
-          color: const Color.fromARGB(210, 226, 214, 214),)
+          icon: const Icon(Icons.shopping_cart),
+          color: Colors.grey[400],
+          )
         ],
       ),
 
@@ -221,55 +222,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     ],
                   ),
                 ),
-                
-                //break
-  
-              //  SizedBox(
-              //    height: 200,
-              //    child: ListView(
-              //      scrollDirection: Axis.horizontal,
-              //      children: [
-              //           Center(
-              //             child: AspectRatio(
-              //               aspectRatio:1.5 / 3,
-              //             child: Container(
-              //               decoration: BoxDecoration(
-              //                 borderRadius: BorderRadius.circular(20),
-              //             image: const DecorationImage(
-              //             fit: BoxFit.cover,
-              //                image: AssetImage('assets/makanan.png')),
-              //                   gradient: LinearGradient(
-              //                     begin: Alignment.bottomRight,
-              //                       stops: const [
-              //                         0.3,
-              //                         0.9
-              //                       ],
-              //                       colors: [
-              //                         Colors.black.withOpacity(.8),
-              //                         Colors.black.withOpacity(.2)
-              //                       ]),
-              //                 ),
-              //                 child: const Align(
-              //                   alignment: Alignment.bottomLeft,
-              //                   child: Padding(
-              //                     padding: EdgeInsets.all(15.0),
-              //                     child: Text(
-              //                       'Veggie tomato mix',
-              //                       style:
-              //                           TextStyle(color: Colors.white, fontSize: 20),
-              //                     ),
-              //                   ),
-              //                 ),
-                                   
-              //             ),
-                          
-                          
-              //             ),
-              //    )],
-              //    ),
-              //  ),
-  
-               
   
                   ],
             ),
@@ -287,25 +239,28 @@ class _MyHomePageState extends State<MyHomePage> {
         padding: const EdgeInsets.all(65),
       ),
 
-        const ListTile(
-          leading: Icon (Icons.person),
-          title: Text('Profile'),
-          iconColor: Colors.white,
-          textColor: Colors.white,
-          minLeadingWidth: 10,
-          // onLongPress: () {
-          //   print('klik');
-          // },
-          // onTap: () {
-          //   print('menu profile');
-          //   },
+        GestureDetector(
+          child: ListTile(
+            leading: const Icon (Icons.person),
+            title: const Text('Profile'),
+            iconColor: Colors.white,
+            textColor: Colors.white,
+            minLeadingWidth: 10,
+            // onLongPress: () {
+            //   print('klik');
+            // },
+            onTap: () {
+              Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const MyProfile()));
+            },
+         ),
         ),
        const Divider(
           height: 1,
           thickness: 1.3,
           indent: 60,
           endIndent: 100,
-          color: Color.fromARGB(43, 255, 255, 255),
+          color: Color(0xffFF460A),
         ),
 
         const ListTile(
@@ -387,9 +342,9 @@ class _MyHomePageState extends State<MyHomePage> {
                           fontWeight: FontWeight.bold),
                     ),
                     Text(
-                    'Rp.16.900.000',
+                    'Rp.16.900,00',
                     style:
-                          TextStyle(color: Color.fromARGB(255, 211, 27, 27),
+                          TextStyle(color: Color(0xffFF460A),
                           fontSize: 14,
                           fontWeight: FontWeight.bold),
                           
@@ -448,7 +403,7 @@ Widget promoCard2(image) {
                     Text(
                     'Rp.8.000,00',
                     style:
-                          TextStyle(color: Color.fromARGB(255, 211, 27, 27),
+                          TextStyle(color: Color(0xffFF460A),
                           fontSize: 14,
                           fontWeight: FontWeight.bold),
                           )

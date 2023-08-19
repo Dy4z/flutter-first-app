@@ -12,6 +12,8 @@ Future main() async {
   // ignore: deprecated_member_use
   FlutterNativeSplash.removeAfter(initialization);
   runApp(const MyApp());
+
+
 }
 
 Future initialization(BuildContext? context) async {
@@ -47,7 +49,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  // This widget is the home page of your application. It is stateful, meaning
   @override
   Widget build (BuildContext context) {
     return Scaffold (
@@ -75,7 +76,6 @@ class _MyHomePageState extends State<MyHomePage> {
               children: <Widget>[
                 Container(
                   width: double.infinity,
-                  BorderRadius.vertical(bottom: Radius.circular(30))),
                   padding: const EdgeInsets.fromLTRB(30, 20, 20, 0),
                   child: const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -86,6 +86,35 @@ class _MyHomePageState extends State<MyHomePage> {
                         fontSize: 40,
                         fontWeight: FontWeight.bold),
                       ),
+
+                      // search
+                      // SizedBox(
+                      //   height: 5,
+                      // ),
+                     
+                      // SizedBox(
+                      //   height: 20,
+                      // ),
+                      // Container(
+                      //   padding: const EdgeInsets.all(5),
+                      //   decoration: BoxDecoration(
+                      //       color: const Color.fromRGBO(244, 243, 243, 1),
+                      //       borderRadius: BorderRadius.circular(15)),
+                      //   child: const TextField(
+                      //     decoration: InputDecoration(
+                      //         border: InputBorder.none,
+                      //         prefixIcon: Icon(
+                      //           Icons.search,
+                      //           color: Colors.black87,
+                      //         ),
+                      //         hintText: "Search you're looking for",
+                      //         hintStyle:
+                      //             TextStyle(color: Colors.grey, fontSize: 15)),
+                      //   ),
+                      // ),
+                      // SizedBox(
+                      //   height: 10,
+                      // ),
                     ],
                   ),
                 ),
@@ -277,9 +306,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           )
                   ],
                 ),
-              ),
-                        
-              
+              ),  
         ),
       ),
     );
@@ -305,7 +332,7 @@ Widget promoCard2(image) {
               colors: [
                 Colors.white.withOpacity(.8),
                 Colors.white.withOpacity(.0)
-              ]),
+              ]), 
               ),
               child: const Padding(
                 padding: EdgeInsets.all(15.0),
@@ -328,8 +355,6 @@ Widget promoCard2(image) {
                   ],
                 ),
               ),
-                        
-              
         ),
       ),
     );

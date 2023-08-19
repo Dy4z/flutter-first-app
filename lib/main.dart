@@ -12,8 +12,6 @@ Future main() async {
   // ignore: deprecated_member_use
   FlutterNativeSplash.removeAfter(initialization);
   runApp(const MyApp());
-
-
 }
 
 Future initialization(BuildContext? context) async {
@@ -77,10 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
               children: <Widget>[
                 Container(
                   width: double.infinity,
-                  // decoration: const BoxDecoration(
-                  //     color: Color.fromARGB(255, 236, 232, 232),
-                  //     borderRadius:
-                  //         BorderRadius.vertical(bottom: Radius.circular(30))),
+                  BorderRadius.vertical(bottom: Radius.circular(30))),
                   padding: const EdgeInsets.fromLTRB(30, 20, 20, 0),
                   child: const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -91,34 +86,6 @@ class _MyHomePageState extends State<MyHomePage> {
                         fontSize: 40,
                         fontWeight: FontWeight.bold),
                       ),
-                      // search
-                      // SizedBox(
-                      //   height: 5,
-                      // ),
-                     
-                      // SizedBox(
-                      //   height: 20,
-                      // ),
-                      // Container(
-                      //   padding: const EdgeInsets.all(5),
-                      //   decoration: BoxDecoration(
-                      //       color: const Color.fromRGBO(244, 243, 243, 1),
-                      //       borderRadius: BorderRadius.circular(15)),
-                      //   child: const TextField(
-                      //     decoration: InputDecoration(
-                      //         border: InputBorder.none,
-                      //         prefixIcon: Icon(
-                      //           Icons.search,
-                      //           color: Colors.black87,
-                      //         ),
-                      //         hintText: "Search you're looking for",
-                      //         hintStyle:
-                      //             TextStyle(color: Colors.grey, fontSize: 15)),
-                      //   ),
-                      // ),
-                      // SizedBox(
-                      //   height: 10,
-                      // ),
                     ],
                   ),
                 ),
@@ -246,9 +213,6 @@ class _MyHomePageState extends State<MyHomePage> {
             iconColor: Colors.white,
             textColor: Colors.white,
             minLeadingWidth: 10,
-            // onLongPress: () {
-            //   print('klik');
-            // },
             onTap: () {
               Navigator.push(context,
               MaterialPageRoute(builder: (context) => const MyProfile()));
@@ -262,36 +226,6 @@ class _MyHomePageState extends State<MyHomePage> {
           endIndent: 100,
           color: Color.fromARGB(43, 255, 255, 255),
         ),
-
-        // const ListTile(
-        //   leading : Icon(Icons.file_open_rounded),
-        //   title: Text('Setting'),
-        //   iconColor: Colors.white,
-        //   textColor: Colors.white,
-        //   minLeadingWidth: 10,
-        // ),
-        // const Divider(
-        //   height: 1,
-        //   thickness: 1.3,
-        //   indent: 60,
-        //   endIndent: 100,
-        //   color: Color.fromARGB(43, 255, 255, 255),
-        // ),
-
-        // const ListTile(
-        //   leading : Icon(Icons.history),
-        //   title: Text('History'),
-        //   iconColor: Colors.white,
-        //   textColor: Colors.white,
-        //   minLeadingWidth: 10,
-        // ),
-        // const Divider(
-        //   height: 1,
-        //   thickness: 1.3,
-        //   indent: 60,
-        //   endIndent: 100,
-        //   color: Color.fromARGB(43, 255, 255, 255),
-        // ),
       ],
     ),
 
@@ -321,14 +255,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 Colors.white.withOpacity(.8),
                 Colors.white.withOpacity(.0)
               ]),
-            //   boxShadow: [
-            //   BoxShadow(
-            //     color: Colors.grey.withOpacity(.6),
-            //     blurRadius: 20.0,
-            //     offset: const Offset(5, 5)
-            //   )
-            // ],
-              
               ),
               child: const Padding(
                 padding: EdgeInsets.all(15.0),
@@ -380,14 +306,6 @@ Widget promoCard2(image) {
                 Colors.white.withOpacity(.8),
                 Colors.white.withOpacity(.0)
               ]),
-            //   boxShadow: [
-            //   BoxShadow(
-            //     color: Colors.grey.withOpacity(.6),
-            //     blurRadius: 20.0,
-            //     offset: const Offset(5, 5)
-            //   )
-            // ],
-              
               ),
               child: const Padding(
                 padding: EdgeInsets.all(15.0),
